@@ -170,31 +170,25 @@ The following models were trained and compared:
 
 ```
 walmart-sales-forecasting/
-│
-├── data/
-│   ├── raw/                        # Raw dataset (download from Kaggle)
-│   └── processed/                  # Cleaned and preprocessed data
-│
-├── notebooks/
-│   ├── 01_EDA.Rmd                 # Exploratory Data Analysis
-│   ├── 02_Feature_Engineering.Rmd # Feature engineering & transformation
-│   ├── 03_Model_Training.Rmd      # Model training & hyperparameter tuning
-│   └── 04_Model_Evaluation.Rmd    # Results & comparison
-│
-├── src/
-│   ├── data_preprocessing.R       # Data cleaning functions
-│   ├── feature_engineering.R      # Feature creation utilities
-│   ├── model_training.R           # Model training pipeline
-│   └── evaluation.R               # Evaluation metrics
-│
-├── models/                         # Saved model objects (.rds files)
-├── results/                        # Performance metrics & visualizations
-├── docs/                          # Documentation & reports
-│
-├── .gitignore
-├── LICENSE
 ├── README.md
-└── requirements.txt               # R package dependencies
+├── docs/
+│   └── Walmart_Sales_Forecasting_Report.pdf
+├── src/
+│   ├── data_preprocessing.R
+│   ├── feature_engineering.R
+│   ├── model_training.R
+│   └── evaluation.R
+├── notebooks/
+│   ├── 01_EDA.Rmd
+│   ├── 02_Feature_Engineering.Rmd
+│   ├── 03_Model_Training.Rmd
+│   └── 04_Model_Evaluation.Rmd
+├── results/
+│   ├── metrics_summary.csv
+│   └── figures/
+│       └── purchase_distribution.png
+└── .gitignore
+
 ```
 
 ---
