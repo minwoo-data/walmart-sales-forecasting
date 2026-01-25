@@ -1,0 +1,11 @@
+# Raw data (do not upload)
+data/raw/
+
+# Processed data (auto-generated)
+data/processed/
+
+# Model artifacts (auto-generated, often large)
+outputs/
+
+# Any saved R model objects
+*.rds
