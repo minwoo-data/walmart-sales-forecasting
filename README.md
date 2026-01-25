@@ -23,6 +23,13 @@ This project focuses on predicting **customer purchase amounts** using the **Wal
 - **Target Variable:** `Purchase` (purchase amount in dollars)
 - **Evaluation Metrics:** RMSE, MAE, R-squared
 
+### Highlights
+- Trained and compared **5 regression models** on **550K+ transactions**
+- Detected **0.49% outliers** via **IQR** and stabilized variance using **log(Purchase)**
+- Best model: **Linear Regression (log target)** with **R² ≈ 0.736**
+- Used **5-fold cross-validation** for linear models and a **70/30 train-test split** for heavy models (runtime constraints)
+- Built a reproducible pipeline: **preprocessing → EDA → modeling → evaluation**
+
 ---
 
 ## 📊 Dataset
@@ -171,23 +178,21 @@ The following models were trained and compared:
 ```
 walmart-sales-forecasting/
 ├── README.md
+├── .gitignore
 ├── docs/
 │   └── Walmart_Sales_Forecasting_Report.pdf
 ├── src/
-│   ├── data_preprocessing.R
-│   ├── feature_engineering.R
-│   ├── model_training.R
-│   └── evaluation.R
-├── notebooks/
-│   ├── 01_EDA.Rmd
-│   ├── 02_Feature_Engineering.Rmd
-│   ├── 03_Model_Training.Rmd
-│   └── 04_Model_Evaluation.Rmd
-├── results/
-│   ├── metrics_summary.csv
-│   └── figures/
-│       └── purchase_distribution.png
-└── .gitignore
+│   ├── 00_setup.R
+│   ├── 01_load_and_clean.R
+│   ├── 02_eda_and_outliers.R
+│   ├── 03_feature_engineering.R
+│   ├── 04_linear_and_regularized_models.R
+│   ├── 05_tree_models.R
+│   └── 06_optional_xgb_and_nn.R
+└── results/
+    ├── metrics_summary.csv
+    └── figures/
+        └── purchase_distribution.png
 
 ```
 
